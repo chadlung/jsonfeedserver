@@ -106,7 +106,7 @@ Once you get a few more entries inserted you will see that they come back ordere
 }
 ```
 
-There is a **selfHref** that links you back to an individual entry as well as the date(**updated**) the entry was inserted.  The original JSON POSTed to the server is stored on **body**.  Finally, a unique id identifying the entry is generated and returned as well.
+There is a **selfHref** that links you back to an individual entry as well as the date(**entryDate**) the entry was inserted.  The original JSON POSTed to the server is stored on **body**.  Finally, a unique id identifying the entry is generated and returned as well.
 
 Once the feed gets large enough you can page through it using the **skip** and **limit** parameters on the querystring:
 
