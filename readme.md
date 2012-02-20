@@ -55,7 +55,7 @@ Then you can get the contents of the feed back by doing an HTTP GET:
 http://localhost/myfeed/
 ```
 
-You can create as monay routes as you want:
+You can create as many routes as you want:
 
 ```
 http://localhost/myfeed/events/
