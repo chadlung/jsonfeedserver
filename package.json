@@ -1,0 +1,22 @@
+{
+    "name": "jsonfeedserver"
+    , "description": "JSON Feed Server - A JSON feed store"
+    , "version": "0.0.1"
+    , "author": "Chad Lung <chad.lung@gmail.com>"
+    , "homepage": "https://github.com/chadlung/jsonfeedserver"
+    , "keywords": ["json", "server"]
+    , "engines": { "node": ">= 0.6.7" }
+    , "dependencies": {
+        "express": ">=2.4.5"
+        , "http-status": ">=0.1.1"
+        , "mongoose": ">=2.4.10"
+    }
+    , "devDependencies": {
+        "nodeunit": ">=0.7.3"
+    }
+    , "repository": {
+        "type": "git"
+        , "url": "git://github.com/chadlung/jsonfeedserver.git"
+    }
+    , "main" : "app.js"
+}
