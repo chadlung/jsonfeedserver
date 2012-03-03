@@ -3,8 +3,7 @@
 var express = require('express')
     ,app = express.createServer(
         express.bodyParser()
-        , express.responseTime()
-        , express.logger())
+        , express.responseTime())
     , util = require('util')
     , httpStatus = require('http-status')
     , config = require(__dirname + '/config')
@@ -92,4 +91,4 @@ app.configure(function(){
 });
 
 app.listen(config.server.port);
-console.log('Listening on port ' + config.server.port);
+console.log('Listening on port %d', config.server.port);
