@@ -21,8 +21,8 @@ entry.prototype.save = function(incomingJsonEntry, callback) {
     callback(jsonEntry.save(), jsonEntry);
 }
 
-entry.prototype.getId = function(obj, callback) {
-    jsonEntryModel.findOne({ _id: obj.id }, callback);
+entry.prototype.getId = function(id, callback) {
+    jsonEntryModel.findOne({ _id: id.id }, callback);
 }
 
 entry.prototype.getFeed = function(obj, callback) {
@@ -31,5 +31,5 @@ entry.prototype.getFeed = function(obj, callback) {
 }
 
 entry.prototype.disconnect = function() {
-        mongoose.disconnect();
+    mongoose.disconnect();
 }
