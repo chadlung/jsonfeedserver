@@ -14,7 +14,7 @@ var TEST_OBJECT = {
 
 var TEST_BODY = JSON.stringify(TEST_OBJECT);
 
-exports['test_save'] = function(test, assert) {
+exports['test_save_and_get_id'] = function(test, assert) {
     entry.save({body: TEST_BODY,
             feed: TEST_FEED,
             selfHref: TEST_SELF_HREF},
