@@ -24,7 +24,7 @@ exports['test_save_and_get_id'] = function(test, assert) {
             assert.equal(returnedEntry.feed, TEST_FEED, 'Failure: Feed should match original data');
             assert.equal(returnedEntry.selfHref, TEST_SELF_HREF + '?id=' + returnedEntry._id, 'Failure: Self Href should match original data');
 
-            entry.getId({ id: returnedEntry._id }, function (error, returnedIdEntry) {
+            entry.getId(returnedEntry._id, function (error, returnedIdEntry) {
                 assert.ok(!error);
                 assert.equal(returnedIdEntry._id.toString(), returnedEntry._id.toString(), 'Failure: Returned entry ID did not match saved ID');
                 test.finish();

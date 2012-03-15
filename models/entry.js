@@ -22,7 +22,7 @@ entry.prototype.save = function(incomingJsonEntry, callback) {
 }
 
 entry.prototype.getId = function(id, callback) {
-    jsonEntryModel.findOne({ _id: id.id }, callback);
+    jsonEntryModel.findOne({ _id: id }, callback);
 }
 
 entry.prototype.getFeed = function(obj, callback) {

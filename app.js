@@ -31,7 +31,7 @@ app.post('/*', function(req, res){
 
 app.get('/*', function(req, res){
     if(req.query.id != undefined) {
-		entry.getId({ id: req.query.id }, function (error, returnedEntry) {
+		entry.getId(req.query.id, function (error, returnedEntry) {
 			if(error) {
 				res.send(error.message, httpStatus.INTERNAL_SERVER_ERROR);
 			} else {
