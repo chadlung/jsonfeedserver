@@ -12,10 +12,10 @@ JSON Feed Server is an experimental project to create a feed server that uses JS
 
 **Note:** This project is a (fun) work in progress and lacking unit tests nor has not been extensively tested.  Feel free to contribute back!
 
-To get started using JSON Feed Server on OS X or Linux make sure to install [Nodejs](http://nodejs.org).  Next, clone the source files from GitHub to your computer.  Go into the folder where you cloned the source files and run the following command from a command prompt to install the dependencies:
+To get started using JSON Feed Server on OS X or Linux make sure to install [Nodejs](http://nodejs.org).  Next,  run the following command from a command prompt to install:
 
 ```
-$ npm install
+$ npm install jsonfeedserver
 ```
 
 Once that is completed make sure you have [MongoDB](http://mongodb.org) running and the **config.js** configured to your settings.  Then, simply run the **app.js** file with Nodejs:
