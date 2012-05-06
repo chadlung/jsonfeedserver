@@ -5,14 +5,14 @@
     , "author": "Chad Lung <chad.lung@gmail.com>"
     , "homepage": "https://github.com/chadlung/jsonfeedserver"
     , "keywords": ["json", "server"]
-    , "engines": { "node": ">= 0.6.7" }
+    , "engines": { "node": ">= 0.6.17" }
     , "dependencies": {
         "express": ">=2.5.8"
         , "http-status": ">=0.1.1"
-        , "mongoose": ">=2.5.6"
+        , "mongoose": ">=2.5.10"
     }
     , "devDependencies": {
-        "whiskey": ">=0.6.7"
+        "whiskey": ">=0.6.8"
     }
     , "repository": {
         "type": "git"
