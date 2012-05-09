@@ -5,7 +5,7 @@ var JSONEntry = new Schema({
     body: { type: String },
     feed: { type: String, index: true },
     selfHref: { type: String, index: false },
-    entryDate: { type: Date, default: Date.now }
+    entryDate: { type: Date, default: Date.now, index: true }
 });
 var jsonEntryModel = mongoose.model('JSONEntry', JSONEntry);
 
@@ -19,17 +19,17 @@ entry.prototype.save = function(incomingJsonEntry, callback) {
     jsonEntry.feed = incomingJsonEntry.feed;
     jsonEntry.selfHref = incomingJsonEntry.selfHref + '?id=' + jsonEntry._id;
     callback(jsonEntry.save(), jsonEntry);
-}
+};
 
 entry.prototype.getId = function(id, callback) {
     jsonEntryModel.findOne({ _id: id }, callback);
-}
+};
 
 entry.prototype.getFeed = function(obj, callback) {
     var query = jsonEntryModel.find({});
     query.where('feed', obj.feed).desc('entryDate').skip(obj.skip).limit(obj.limit).run(callback);
-}
+};
 
 entry.prototype.disconnect = function() {
     mongoose.disconnect();
-}
+};
