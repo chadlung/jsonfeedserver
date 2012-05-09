@@ -1,7 +1,7 @@
 {
     "name": "jsonfeedserver"
     , "description": "JSON Feed Server - A JSON feed store"
-    , "version": "0.0.1"
+    , "version": "0.0.2"
     , "author": "Chad Lung <chad.lung@gmail.com>"
     , "homepage": "https://github.com/chadlung/jsonfeedserver"
     , "keywords": ["json", "server"]
