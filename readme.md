@@ -10,7 +10,7 @@
 
 JSON Feed Server is an experimental project to create a feed server that uses JSON rather than a format like ATOM or RSS.
 
-**Note:** This project is a (fun) work in progress and lacking unit tests nor has not been extensively tested.  Feel free to contribute back!
+**Note:** This project is a work in progress and lacking several unit tests and has not been extensively tested.  Feel free to contribute back!
 
 To get started using JSON Feed Server on OS X or Linux make sure to install [Nodejs](http://nodejs.org).  Next,  run the following command from a command prompt to install:
 
