@@ -1,5 +1,3 @@
-// ./mongod --dbpath ~/mongodb-2.0.1/data/db/
-
 var express = require('express')
     ,app = express.createServer(
         express.bodyParser()
