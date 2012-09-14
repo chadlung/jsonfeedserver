@@ -1,4 +1,4 @@
-// To run from the 'whiskey' folder: ./whiskey ../../../tests/entry-tests.js
+// To run from the 'whiskey/bin' folder: ./whiskey ../../../tests/entry-tests.js
 
 var Entry = require('../models/entry.js')
     , util = require('util')
