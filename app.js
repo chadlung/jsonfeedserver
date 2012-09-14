@@ -1,7 +1,5 @@
 var express = require('express')
-    ,app = express.createServer(
-        express.bodyParser()
-        , express.responseTime())
+    , app = express()
     , util = require('util')
     , httpStatus = require('http-status')
     , config = require(__dirname + '/config')
@@ -9,6 +7,15 @@ var express = require('express')
     , INVALID_JSON_ERROR = 'Only valid JSON is supported via HTTP POST';
 
 var entry = new Entry(config.mongodb.connectionUrl);
+
+app.configure(function(){
+    app.use(express.bodyParser());
+    app.use(express.responseTime());
+
+    app.use(function(err, req, res, next){
+        res.send(INVALID_JSON_ERROR, httpStatus.UNSUPPORTED_MEDIA_TYPE);
+    });
+});
 
 app.post('/*', function(req, res){
     if(req.is('application/json')) {
@@ -31,7 +38,7 @@ app.get('/*', function(req, res){
     if(req.query.id != undefined) {
 		entry.getId(req.query.id, function (error, returnedEntry) {
 			if(error) {
-				res.send(error.message, httpStatus.INTERNAL_SERVER_ERROR);
+				res.send(error.message, httpStatus.BAD_REQUEST);
 			} else {
 				if(returnedEntry != undefined) {
 					res.json(returnedEntry);
@@ -77,15 +84,6 @@ app.get('/*', function(req, res){
             }
         });
     }
-});
-
-app.configure(function(){
-    app.use(express.bodyParser());
-    app.use(express.responseTime());
-
-    app.use(function(err, req, res, next){
-        res.send(INVALID_JSON_ERROR, httpStatus.UNSUPPORTED_MEDIA_TYPE);
-    });
 });
 
 app.listen(config.server.port);

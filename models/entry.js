@@ -26,8 +26,7 @@ entry.prototype.getId = function(id, callback) {
 };
 
 entry.prototype.getFeed = function(obj, callback) {
-    var query = jsonEntryModel.find({});
-    query.where('feed', obj.feed).desc('entryDate').skip(obj.skip).limit(obj.limit).run(callback);
+    jsonEntryModel.find({}).where('feed', obj.feed).sort({ entryDate: 'asc'}).skip(obj.skip).limit(obj.limit).exec(callback);
 };
 
 entry.prototype.disconnect = function() {
