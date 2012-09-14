@@ -12,6 +12,8 @@ JSON Feed Server is an experimental project to create a feed server that uses JS
 
 **Note:** This project is a work in progress and lacking several unit tests and has not been extensively tested.  Feel free to contribute back!
 
+**Update Sept. 14, 2012:** I've updated this project to use Express 3.x and Mongoose 3.x.  I have some additional ideas planned as well as a much needed refactoring of the code.
+
 To get started using JSON Feed Server on OS X or Linux make sure to install [Nodejs](http://nodejs.org).  Next,  run the following command from a command prompt to install:
 
 ```
