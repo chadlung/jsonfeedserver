@@ -14,7 +14,7 @@ var TEST_OBJECT = {
 
 var TEST_BODY = JSON.stringify(TEST_OBJECT);
 
-exports['test_save_and_get_id'] = function(test, assert) {
+exports['test_model_entry'] = function(test, assert) {
     entry.save({body: TEST_BODY,
             feed: TEST_FEED,
             selfHref: TEST_SELF_HREF},
@@ -27,8 +27,13 @@ exports['test_save_and_get_id'] = function(test, assert) {
             entry.getId(returnedEntry._id, function (error, returnedIdEntry) {
                 assert.ok(!error);
                 assert.equal(returnedIdEntry._id.toString(), returnedEntry._id.toString(), 'Failure: Returned entry ID did not match saved ID');
-                test.finish();
-            });
+                
+                entry.getFeed({feed: TEST_FEED, limit: 25, skip: 0}, function (error, returnedIdEntries) {
+                    assert.ok(!error);
+                    assert.ok(returnedIdEntries.length > 0, 'Failure: Returned entries count should be 1 or greater');
+                    test.finish();
+                }); 
+            });            
         });
 }
 
