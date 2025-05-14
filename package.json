@@ -1,22 +1,37 @@
 {
-    "name": "jsonfeedserver"
-    , "description": "JSON Feed Server - A JSON feed store"
-    , "version": "0.0.5"
-    , "author": "Chad Lung <chad.lung@gmail.com>"
-    , "homepage": "https://github.com/chadlung/jsonfeedserver"
-    , "keywords": ["json", "server"]
-    , "engines": { "node": ">= 0.6.17" }
-    , "dependencies": {
-        "express": ">=3.0.0rc4"
-        , "http-status": ">=0.1.1"
-        , "mongoose": ">=3.1.2"
-    }
-    , "devDependencies": {
-        "whiskey": ">=0.6.10"
-    }
-    , "repository": {
-        "type": "git"
-        , "url": "git://github.com/chadlung/jsonfeedserver.git"
-    }
-    , "main" : "app.js"
+  "name": "jsonfeedserver",
+  "version": "2.0.0",
+  "description": "A JSON Feed Server",
+  "author": "Chad Lung",
+  "license": "MIT",
+  "homepage": "https://github.com/chadlung/jsonfeedserver#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadlung/jsonfeedserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chadlung/jsonfeedserver/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsx --env-file=.env --watch  src/app.ts",
+    "lint": "eslint .",
+    "eslint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "-": "^0.0.1",
+    "@prisma/client": "6.7.0",
+    "express": "4.21.2",
+    "http-status": "^2.1.0",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.13.0",
+    "@types/express": "5.0.1",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.26.0",
+    "eslint-plugin-format": "^1.0.1",
+    "prisma": "^6.7.0",
+    "typescript": "^5.8.3"
+  }
 }
